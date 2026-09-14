@@ -5,7 +5,7 @@
 目前單元：
 
 - 2026-09-09「問題意識」再探，38 張
-- 2026-09-15「研究動機」（502），29 張；無圖片，`styles.css` 末尾新增 `.quote-block`、`.contrast`、`.premises .sub`、`.prose`、`.sample-tag` 五組版面
+- 2026-09-15「研究動機」（502），32 張；無圖片，`styles.css` 末尾新增 `.quote-block`、`.contrast`、`.premises .sub`、`.prose`、`.sample-tag` 五組版面
 
 ## 目錄結構
 
@@ -62,7 +62,7 @@ python3 -m http.server 8000
 1. 在 `lessons/` 建立 `YYYY-MM-DD-單元名稱/`，把新原稿存成 `講義原稿.md`，圖片放進該資料夾的 `assets/`。
 2. 複製既有單元的 `index.html` 作為骨架，更改頁面 `<title>`、description、日期與 `.deck` 的 `data-title`，替換 `<main>` 內的投影片內容。維持 `lang="zh-Hant-TW"`。
 3. 每張投影片依序使用唯一的 `id="slide-1"`、`id="slide-2"` 等，以及對應的標題 ID／`aria-labelledby`。保留 `class="slide"`、`data-section` 和 `data-theme`。頁數與進度由引擎自動計算，不必修改 `app.js`。
-4. 依內容選用 `title-slide`、`section-slide`、`statement-slide`、`question-slide`；主題色可用 `navy`、`slate`、`mist`、`paper`。長句可用 `display-copy` 或 `reading-title`，優先拆頁。整段文章用 `.prose`（示範稿）、引文用 `.quote-block`、兩欄對照用 `.contrast`、`.premises` 內的子項用 `<ul class="sub">`；在 `ol`／`blockquote`／`p` 這類容器上設 `max-width` 一律用 `rem`，用 `em` 會依容器 16px 字級計算而把內容擠成直排。講者提示放在 `<aside class="speaker-notes">`，不擴寫原稿正文；沒有實質提示就不要放空泛的罐頭備註。
+4. 依內容選用 `title-slide`、`section-slide`、`statement-slide`、`question-slide`；主題色可用 `navy`、`slate`、`mist`、`paper`。長句可用 `display-copy` 或 `reading-title`，優先拆頁。整段文章用 `.prose`（示範稿）、三欄對照用 `.contrast.three`、字多的清單用 `.premises.compact`、引文用 `.quote-block`、兩欄對照用 `.contrast`、`.premises` 內的子項用 `<ul class="sub">`；在 `ol`／`blockquote`／`p` 這類容器上設 `max-width` 一律用 `rem`，用 `em` 會依容器 16px 字級計算而把內容擠成直排。講者提示放在 `<aside class="speaker-notes">`，不擴寫原稿正文；沒有實質提示就不要放空泛的罐頭備註。
 5. 保留頁面底部控制列、講者備註面板與操作說明 dialog。共用檔案繼續引用 `../../styles.css`、`../../app.js`、`../../favicon.svg`；單元圖片用 `assets/圖片.png`。
 6. 在根目錄 `index.html` 的 `.lesson-list` 複製一個 `<li>`，更新入口相對路徑、日期與名稱。
 7. 本地預覽，檢查正文、投影畫面、手機、換頁與連結，並在 README 補上新增圖片的來源與授權說明。
@@ -75,7 +75,7 @@ python3 -m http.server 8000
 - 保留中選會、環境資訊中心、報導者與科技新報的原始連結與連結文字，點擊後在新分頁閱讀。原稿末尾的 AI 標注屬於筆記層的修訂史，不進投影片。
 - 技術與視覺節奏延續 `folldark/sustainable-food-class` 的原生 HTML／CSS／JS 寫法、`data-section`／`data-theme`、講者備註、深淺底色交替與大字提問；本課改採墨藍、霧藍、灰白。
 - 制服與核電段落的前提仍是待檢驗假設，授課提示保留在講者備註。
-- 2026-09-15 單元第 17–21 張「示範稿」是依原稿「to AI agent」的要求，把電梯例子依三步驟範本寫成的完整研究動機，內容只用原稿既有的觀察與假設；第 3 張「對別人來說」的套套邏輯疑慮與候選說法放在講者備註，尚未與授課老師討論定案。
+- 2026-09-15 單元第 18–22 張「示範稿」是依原稿「to AI agent」的要求，把電梯例子依三步驟範本寫成的完整研究動機，內容只用原稿既有的觀察與假設；第 4 張把「對別人來說」拆成讀者要做的三個判斷，是依原稿「to AI agent」的討論整理、經授課老師同意加入正文。
 
 ## 圖片來源與產生方式
 

@@ -198,7 +198,10 @@ noscript { display: block; padding: 1rem; background: var(--paper); }
 .quote-block { max-width: 50rem; padding-left: 1.2em; border-left: 6px solid var(--accent); font-size: clamp(1.4rem, 2.7vw, 2.7rem); line-height: 1.6; font-weight: 600; }
 .contrast { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 4vw, 4rem); padding: 0; list-style: none; max-width: 70rem; }
 .contrast li { display: grid; gap: .6em; align-content: start; padding-top: .8em; border-top: 3px solid var(--accent); font-size: clamp(1.4rem, 2.7vw, 2.7rem); line-height: 1.5; font-weight: 600; }
+.contrast.three { grid-template-columns: repeat(3, 1fr); max-width: none; }
+.contrast.three li { font-size: clamp(1.25rem, 2.2vw, 2.2rem); }
 .contrast .label { font-size: clamp(.9rem, 1.45vw, 1.25rem); font-weight: 800; letter-spacing: .16em; color: var(--accent); }
+.premises.compact { gap: .7em; font-size: clamp(1.3rem, 2.5vw, 2.6rem); }
 .premises .sub { display: grid; gap: .4em; margin-top: .5em; padding-left: 1.3em; list-style: disc; }
 .premises .sub li { font-size: .68em; font-weight: 500; line-height: 1.5; }
 .premises .sub li::marker { color: var(--accent); }
@@ -206,7 +209,7 @@ noscript { display: block; padding: 1rem; background: var(--paper); }
 .prose + .prose { margin-top: .4em; }
 .sample-tag { display: inline-block; margin-bottom: .4em; padding: .25em .7em; border: 2px solid var(--accent); border-radius: 999px; font-size: clamp(.85rem, 1.3vw, 1.15rem); font-weight: 800; letter-spacing: .14em; color: var(--accent); }
 @media (max-width: 760px) {
-  .contrast { grid-template-columns: 1fr; }
+  .contrast, .contrast.three { grid-template-columns: 1fr; }
   .contrast li, .quote-block, .prose { font-size: clamp(1.15rem, 4.4vw, 1.7rem); }
   .quote-block { padding-left: .8em; border-left-width: 4px; }
 }
