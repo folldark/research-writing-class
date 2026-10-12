@@ -6,6 +6,7 @@
 
 - 2026-09-09「問題意識」再探，38 張
 - 2026-09-15「研究動機」（502），32 張；無圖片，`styles.css` 末尾新增 `.quote-block`、`.contrast`、`.premises .sub`、`.prose`、`.sample-tag` 五組版面
+- 2026-10-13「研究方法」，52 張；無圖片，範例取自中學生網站 1150313 梯次小論文特優作品；`styles.css` 末尾新增 `.map-table`（三欄對照表）、`.premises.purpose`（研究目的清單）、`.premises.checklist`（七項檢查表）、`.premises.two-col`（直向排序的雙欄清單）四組版面
 
 ## 目錄結構
 
@@ -25,7 +26,10 @@ research-writing-class/
     │   └── assets/
     │       ├── worldview-crystallization.png
     │       └── accumulated-knowledge.png
-    └── 2026-09-15-研究動機/
+    ├── 2026-09-15-研究動機/
+    │   ├── index.html
+    │   └── 講義原稿.md
+    └── 2026-10-13-研究方法/
         ├── index.html
         └── 講義原稿.md
 ```
@@ -64,7 +68,7 @@ python3 -m http.server 8000
 1. 在 `lessons/` 建立 `YYYY-MM-DD-單元名稱/`，把新原稿存成 `講義原稿.md`，圖片放進該資料夾的 `assets/`。
 2. 複製既有單元的 `index.html` 作為骨架，更改頁面 `<title>`、description、日期與 `.deck` 的 `data-title`，替換 `<main>` 內的投影片內容。維持 `lang="zh-Hant-TW"`。
 3. 每張投影片依序使用唯一的 `id="slide-1"`、`id="slide-2"` 等，以及對應的標題 ID／`aria-labelledby`。保留 `class="slide"`、`data-section` 和 `data-theme`。頁數與進度由引擎自動計算，不必修改 `app.js`。
-4. 依內容選用 `title-slide`、`section-slide`、`statement-slide`、`question-slide`；主題色可用 `navy`、`slate`、`mist`、`paper`。長句可用 `display-copy` 或 `reading-title`，優先拆頁。整段文章用 `.prose`（示範稿）、三欄對照用 `.contrast.three`、字多的清單用 `.premises.compact`、引文用 `.quote-block`、兩欄對照用 `.contrast`、`.premises` 內的子項用 `<ul class="sub">`；在 `ol`／`blockquote`／`p` 這類容器上設 `max-width` 一律用 `rem`，用 `em` 會依容器 16px 字級計算而把內容擠成直排。講者提示放在 `<aside class="speaker-notes">`，不擴寫原稿正文；沒有實質提示就不要放空泛的罐頭備註。
+4. 依內容選用 `title-slide`、`section-slide`、`statement-slide`、`question-slide`；主題色可用 `navy`、`slate`、`mist`、`paper`。長句可用 `display-copy` 或 `reading-title`，優先拆頁。整段文章用 `.prose`（示範稿）、三欄對照用 `.contrast.three`、字多的清單用 `.premises.compact`、三欄對照表用 `.map-table`、條列很多的檢查表用 `.premises.checklist`、六項以內的短清單可用 `.premises.two-col`（直向排序）、引文用 `.quote-block`、兩欄對照用 `.contrast`、`.premises` 內的子項用 `<ul class="sub">`；在 `ol`／`blockquote`／`p` 這類容器上設 `max-width` 一律用 `rem`，用 `em` 會依容器 16px 字級計算而把內容擠成直排。講者提示放在 `<aside class="speaker-notes">`，不擴寫原稿正文；沒有實質提示就不要放空泛的罐頭備註。
 5. 保留頁面底部控制列、講者備註面板與操作說明 dialog。共用檔案繼續引用 `../../styles.css`、`../../app.js`、`../../favicon.svg`；單元圖片用 `assets/圖片.png`。
 6. 在根目錄 `index.html` 的 `.lesson-list` 複製一個 `<li>`，更新入口相對路徑、日期與名稱。
 7. 本地預覽，檢查正文、投影畫面、手機、換頁與連結，並在 README 補上新增圖片的來源與授權說明。
