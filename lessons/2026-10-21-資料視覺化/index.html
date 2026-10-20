@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="和美高中 115-1 專題寫作指導：資料視覺化——從 Kobe 和 KD 的三分球比較談起，典型圖表的用法、選圖前的三個問題與牛刀小試。" />
+    <meta name="theme-color" content="#182e46" />
+    <title>資料視覺化｜115-1 專題寫作指導</title>
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body class="presentation">
+    <a class="skip-link" href="#deck">跳到投影片</a>
+    <main id="deck" class="deck" tabindex="-1" data-title="資料視覺化｜115-1 專題寫作指導">
+      <!-- 01 -->
+      <section id="slide-1" class="slide title-slide" data-section="開場" data-theme="navy" aria-labelledby="heading-1">
+        <p class="eyebrow">和美高中・115-1 專題寫作指導</p><h1 id="heading-1"><span class="accent">資料視覺化</span></h1><p class="body-large">看見數字背後的故事</p><p class="meta">2026.10.21</p>
+        <aside class="speaker-notes">本單元沿用 114-2（505）2026-05-07 的投影片，改用本課程的投影片版型。原稿的引起動機：拿 NBA 球員三分線命中數、命中率的 csv 檔給學生看，問他們覺得 Kobe 和 KD 誰比較強，用類似「戰古今」的方法引起一番討論，最後再把圖表呈現出來。</aside>
+      </section>
+
+      <!-- 02 -->
+      <section id="slide-2" class="slide question-slide" data-section="引起動機" data-theme="paper" aria-labelledby="heading-2">
+        <p class="kicker">先問一個問題</p><h2 id="heading-2" class="reading-title"><span class="accent">Kobe Bryant</span> 和 <span class="accent">Kevin Durant</span>，<br />誰是比較強的三分球射手？</h2>
+        <aside class="speaker-notes">先讓學生各自表態、說理由，再翻下一張給數字。</aside>
+      </section>
+
+      <!-- 03 -->
+      <section id="slide-3" class="slide" data-section="引起動機" data-theme="mist" aria-labelledby="heading-3">
+        <h2 id="heading-3" class="kicker">生涯三分球出手數</h2>
+        <ul class="stat-pair">
+          <li><span class="label">Kobe Bryant</span><span class="stat">5,546</span><span class="stat-sub">5 座總冠軍 · 18 次全明星</span></li>
+          <li><span class="label">Kevin Durant</span><span class="stat">5,574</span><span class="stat-sub">2 座總冠軍 · 14 次全明星</span></li>
+        </ul>
+        <p class="body-large">→ 出手數幾乎一樣（差 28 球），這樣比得出來嗎？</p>
+      </section>
+
+      <!-- 04 -->
+      <section id="slide-4" class="slide" data-section="引起動機" data-theme="paper" aria-labelledby="heading-4">
+        <h2 id="heading-4" class="compact-title">那加上「命中率」呢？</h2>
+        <div class="chart-split">
+          <div class="chart-pair">
+            <figure class="chart-box"><canvas id="chart-attempts" role="img" aria-label="長條圖：生涯三分球出手數，Kobe 5,546，KD 5,574"></canvas></figure>
+            <figure class="chart-box"><canvas id="chart-pct" role="img" aria-label="長條圖：生涯三分球命中率，Kobe 32.9%，KD 39.1%"></canvas></figure>
+          </div>
+          <div class="chart-side">
+            <ul class="premises compact">
+              <li>出手數差不多（5,546 vs 5,574）</li>
+              <li>KD 命中率：<strong>39.1%</strong></li>
+              <li>Kobe 命中率：<strong>32.9%</strong></li>
+              <li>差距：<span class="accent">6.2 個百分點</span></li>
+            </ul>
+            <p class="quote-block">出手數一樣多，KD 投進的球大約多了 <strong>340 顆</strong>。</p>
+          </div>
+        </div>
+        <aside class="speaker-notes">原版把出手數與命中率畫在同一個 Y 軸上（兩組單位不同），命中率的長條幾乎看不見，這版拆成兩張小圖、數字不變。另外：依本頁數字算，5,574 × 39.1% − 5,546 × 32.9% ≈ 355 顆；「約 340 顆」是用 6.2 個百分點乘上約 5,500 次出手的估算。學生若追問可以順帶討論估算方式。</aside>
+      </section>
+
+      <!-- 05 -->
+      <section id="slide-5" class="slide" data-section="全景" data-theme="mist" aria-labelledby="heading-5">
+        <h2 id="heading-5" class="compact-title">那其他射手呢？</h2>
+        <p class="body-large">把生涯三分球出手數前 55 名的球員，全部放在同一張圖上。</p>
+        <ul class="contrast three">
+          <li><span class="label">X 軸</span>生涯三分球出手數</li>
+          <li><span class="label">Y 軸</span>生涯三分球命中率</li>
+          <li><span class="label">每個圓點</span>一位球員</li>
+        </ul>
+        <p class="meta">資料來源：basketball-reference.com（截至 2026-04）</p>
+        <aside class="speaker-notes">翻下一頁，看看誰在哪裡。【未實測】數字是 114-2 製作時（2026-04）的資料，這學期沒有重新查證；Curry、Harden、LeBron 等現役球員的數字已經變動，若學生問到最新數字，請說明是半年前的資料。</aside>
+      </section>
+
+      <!-- 06 -->
+      <section id="slide-6" class="slide chart-slide" data-section="全景" data-theme="paper" aria-labelledby="heading-6">
+        <h2 id="heading-6" class="kicker">NBA 史上 55 大三分射手</h2>
+        <figure class="chart-box chart-wide"><canvas id="chart-scatter" role="img" aria-label="散布圖：NBA 生涯三分球出手數前 55 名球員的出手數與命中率，標示 Curry、KD、Kobe、Korver、Westbrook"></canvas></figure>
+        <p class="meta">滑鼠移到圓點上會顯示球員名字。</p>
+        <aside class="speaker-notes">先讓學生自己找 Kobe 和 KD 在哪裡，再翻下一張。</aside>
+      </section>
+
+      <!-- 07 -->
+      <section id="slide-7" class="slide" data-section="全景" data-theme="mist" aria-labelledby="heading-7">
+        <h2 id="heading-7" class="kicker">這張圖告訴我們什麼？</h2>
+        <ul class="premises compact">
+          <li><strong>Curry</strong> 在最右上角——出手最多、命中率還名列前茅</li>
+          <li><strong>Korver</strong> 出手中等但命中率最高（42.9%）：精準型</li>
+          <li><strong>Westbrook</strong> 出手很多但命中率只有 30.8%：量大但效率低</li>
+          <li><strong>Kobe</strong> 在偏左下：以三分球論，他不在頂尖之列</li>
+        </ul>
+      </section>
+
+      <!-- 08 -->
+      <section id="slide-8" class="slide statement-slide" data-section="全景" data-theme="navy" aria-labelledby="heading-8">
+        <h2 id="heading-8" class="display-copy">同一份資料，<br />換一種呈現方式，<br />故事就<span class="accent">完全不同</span>。</h2>
+      </section>
+
+      <!-- 09 -->
+      <section id="slide-9" class="slide statement-slide" data-section="為什麼要視覺化" data-theme="slate" aria-labelledby="heading-9">
+        <h2 id="heading-9" class="display-copy"><span class="kicker">結論</span>人是視覺的動物</h2>
+        <p class="body-large">透過資料視覺化，你能更快速、更直觀地理解事情的<span class="accent">全貌</span>。</p>
+      </section>
+
+      <!-- 10 -->
+      <section id="slide-10" class="slide" data-section="為什麼要視覺化" data-theme="paper" aria-labelledby="heading-10">
+        <h2 id="heading-10" class="kicker">同一件事，三種呈現</h2>
+        <ul class="contrast three">
+          <li><span class="label">單一數字</span>看不到比較</li>
+          <li><span class="label">表格</span>看得到比較，但要動腦排序</li>
+          <li><span class="label">圖表</span>一眼就知道趨勢、極端值、群聚</li>
+        </ul>
+      </section>
+
+      <!-- 11 -->
+      <section id="slide-11" class="slide" data-section="實際例子" data-theme="mist" aria-labelledby="heading-11">
+        <h2 id="heading-11" class="kicker">實際例子｜遠見雜誌</h2>
+        <p class="body-large">遠見雜誌的這一期主題：<a href="https://www.gvm.com.tw/topic/2352?srsltid=AfmBOoppz3Oew5Ntjb6kryXlyFvesaYedTq9WP7ibJPk-OorozKe_Mej" target="_blank" rel="noopener noreferrer">遠見雜誌 Topic 2352</a></p>
+        <ul class="premises compact">
+          <li><strong>折線圖</strong>：讓讀者看到趨勢的方向（往上、往下、轉折）</li>
+          <li><strong>長條圖</strong>：讓讀者一眼比較不同類別的大小</li>
+          <li>專業媒體之所以讓讀者「看得懂」一個議題，圖表往往比文字更先發揮作用。</li>
+        </ul>
+        <aside class="speaker-notes">原稿：以這一期主題網站說明折線圖、長條圖的功能，如何讓大眾看到趨勢。上課前請先點開確認專題頁還在、圖表能正常載入。</aside>
+      </section>
+
+      <!-- 12 -->
+      <section id="slide-12" class="slide section-slide long-title" data-section="典型用法" data-theme="slate" aria-labelledby="heading-12">
+        <h2 id="heading-12">典型圖表的<br /><span class="accent">用法</span></h2>
+      </section>
+
+      <!-- 13 -->
+      <section id="slide-13" class="slide" data-section="典型用法" data-theme="paper" aria-labelledby="heading-13">
+        <h2 id="heading-13" class="compact-title">象限圖（散布圖）</h2>
+        <p class="kicker accent">區分類別／二維分類</p>
+        <ul class="premises compact">
+          <li><strong>BCG 矩陣</strong>：市佔率 × 成長率<ul class="sub"><li>明星／金牛／問題／瘦狗</li></ul></li>
+          <li><strong>艾森豪矩陣</strong>：重要 × 緊急</li>
+          <li>剛剛 NBA 球員散布圖<ul class="sub"><li>出手數 × 命中率</li></ul></li>
+        </ul>
+      </section>
+
+      <!-- 14 -->
+      <section id="slide-14" class="slide" data-section="典型用法" data-theme="mist" aria-labelledby="heading-14">
+        <h2 id="heading-14" class="compact-title">折線圖</h2>
+        <p class="kicker accent">趨勢變化／時間序列</p>
+        <ul class="premises compact two-col">
+          <li>台灣出生人口逐年下降（少子化）</li>
+          <li>台積電股價 10 年走勢</li>
+          <li>每月平均氣溫</li>
+          <li>新冠疫情每日確診數</li>
+        </ul>
+      </section>
+
+      <!-- 15 -->
+      <section id="slide-15" class="slide" data-section="典型用法" data-theme="paper" aria-labelledby="heading-15">
+        <h2 id="heading-15" class="compact-title">長條圖</h2>
+        <p class="kicker accent">比較類別之間的數量</p>
+        <ul class="premises compact two-col">
+          <li>各縣市人口數</li>
+          <li>各國 2025 年 GDP</li>
+          <li>班上各科平均分數</li>
+          <li>各品牌手機市佔率</li>
+        </ul>
+      </section>
+
+      <!-- 16 -->
+      <section id="slide-16" class="slide" data-section="典型用法" data-theme="mist" aria-labelledby="heading-16">
+        <h2 id="heading-16" class="compact-title">圓餅圖</h2>
+        <p class="kicker accent">顯示比例／部分對全體</p>
+        <ul class="premises compact">
+          <li>選舉得票率</li>
+          <li>家庭支出結構（食衣住行）</li>
+          <li>台灣能源結構（火力／核能／再生）</li>
+        </ul>
+        <p class="body-large">⚠️ 類別超過 5–6 種就不適合，會看不清楚</p>
+      </section>
+
+      <!-- 17 -->
+      <section id="slide-17" class="slide" data-section="怎麼選圖" data-theme="paper" aria-labelledby="heading-17">
+        <h2 id="heading-17" class="kicker">選圖之前，先問三個問題</h2>
+        <ol class="premises">
+          <li>我想讓觀眾看到<span class="accent">什麼</span>？比較？趨勢？比例？關係？</li>
+          <li>我的資料有<span class="accent">幾個維度</span>？單一指標？兩個變數？時間序列？</li>
+          <li>我想引導觀眾得到<span class="accent">什麼結論</span>？</li>
+        </ol>
+      </section>
+
+      <!-- 18 -->
+      <section id="slide-18" class="slide statement-slide" data-section="怎麼選圖" data-theme="navy" aria-labelledby="heading-18">
+        <h2 id="heading-18" class="display-copy">圖表是「<span class="accent">論述工具</span>」，<br />不只是裝飾。</h2>
+        <p class="body-large">選錯圖，會讓讀者誤解你想說的話。</p>
+      </section>
+
+      <!-- 19 -->
+      <section id="slide-19" class="slide" data-section="牛刀小試" data-theme="mist" aria-labelledby="heading-19">
+        <h2 id="heading-19" class="compact-title">牛刀小試</h2>
+        <p class="body-large">在這個 Google Drive 資料夾裡，有一些可以練習的資料：<a href="https://drive.google.com/drive/folders/1EOUc74zH4lsJnovYVebJt8kz8SLLhPR2?ths=true" target="_blank" rel="noopener noreferrer">開啟 Google Drive 資料夾</a></p>
+        <ul class="premises compact">
+          <li>每組挑一個檔案</li>
+          <li><strong>不限方法、不限工具</strong>：Excel、Google 試算表、Canva、ChatGPT… 都可以</li>
+          <li>畫出至少一張圖表</li>
+          <li>準備上台向同學<strong>解釋</strong>：你選了什麼圖、為什麼選這個、看出了什麼</li>
+        </ul>
+        <aside class="speaker-notes">原稿：讓同學下載後不限方法畫出圖表，徵求每一個檔案一組展示他們畫出來的資料，並加以解釋。這個資料夾是 114-2 給 505 用的，上課前請確認 502 學生（hmsh 帳號）有權限開啟。</aside>
+      </section>
+
+      <!-- 20 -->
+      <section id="slide-20" class="slide statement-slide" data-section="牛刀小試" data-theme="slate" aria-labelledby="heading-20">
+        <h2 id="heading-20" class="display-copy"><span class="kicker">提示</span>解釋「為什麼選這張圖」，<br />比把圖畫漂亮<span class="accent">更重要</span>。</h2>
+      </section>
+
+      <!-- 21 -->
+      <section id="slide-21" class="slide" data-section="可用資料來源" data-theme="paper" aria-labelledby="heading-21">
+        <h2 id="heading-21" class="kicker">更多資料來源：如果你想自己找題目做專題</h2>
+        <ul class="premises compact">
+          <li><a href="https://pride.stpi.narl.org.tw/index" target="_blank" rel="noopener noreferrer">PRIDE 政策研究指標資料庫</a>─ 國科會建置，跨國政策、科技、經濟、社會指標</li>
+          <li><a href="https://www.stat.gov.tw/Default.aspx" target="_blank" rel="noopener noreferrer">中華民國統計資訊網</a>─ 行政院主計總處，人口、物價、GDP、勞動等官方統計</li>
+        </ul>
+        <p class="reading-links">延伸閱讀（給有興趣的同學）：<a href="https://ourworldindata.org/" target="_blank" rel="noopener noreferrer">Our World in Data</a>（英文，全球議題視覺化）、<a href="https://www.gov.tw/Page/da4c1320-d0f1-4f54-849f-5e5a93d53e5d" target="_blank" rel="noopener noreferrer">政府資料開放平台</a></p>
+      </section>
+
+      <!-- 22 -->
+      <section id="slide-22" class="slide title-slide" data-section="本週任務" data-theme="navy" aria-labelledby="heading-22">
+        <h2 id="heading-22" class="display-copy">看見數字背後<br /><span class="accent">真正想說的故事</span></h2>
+        <p class="kicker">本週任務</p>
+        <p class="body-large">在你既有的主題裡，找到一份量化的資料，把它變成圖表放進報告裡。</p>
+      </section>
+    </main>
+    <nav class="chrome" aria-label="投影片控制列">
+      <a class="course-link" href="../../index.html" aria-label="返回課程首頁">課程首頁</a>
+      <button id="prev" type="button" aria-label="上一張投影片">←</button>
+      <div class="progress-shell" aria-hidden="true"><span id="progress"></span></div>
+      <button id="counter" type="button" aria-live="polite" aria-atomic="true" aria-label="跳到指定頁">01 / 22</button>
+      <button id="next" type="button" aria-label="下一張投影片">→</button>
+      <button id="notes" type="button" aria-label="開啟講者備註" aria-controls="notes-panel" aria-expanded="false">備註</button>
+      <button id="fullscreen" type="button" aria-label="進入全螢幕">全螢幕</button>
+      <button id="help" type="button" aria-label="顯示操作說明">?</button>
+    </nav>
+    <aside id="notes-panel" class="notes-panel" aria-label="講者備註" aria-hidden="true" inert>
+      <div><strong>講者備註</strong><button id="close-notes" type="button" aria-label="關閉講者備註">×</button></div>
+      <p id="notes-copy"></p>
+    </aside>
+    <dialog id="help-dialog" aria-labelledby="help-title">
+      <form method="dialog">
+        <button class="dialog-close" aria-label="關閉操作說明">×</button>
+        <h2 id="help-title">操作方式</h2>
+        <dl>
+          <dt>← / →、PageUp / PageDown</dt><dd>上一張／下一張</dd>
+          <dt>Space / Enter</dt><dd>下一張</dd>
+          <dt>Home / End</dt><dd>第一張／最後一張</dd>
+          <dt>F</dt><dd>進入或離開全螢幕</dd>
+          <dt>數字＋Enter</dt><dd>跳到該頁</dd>
+          <dt>G／點頁碼</dt><dd>開啟目錄，挑一張跳過去</dd>
+          <dt>N</dt><dd>開啟或關閉講者備註</dd>
+          <dt>Esc</dt><dd>關閉備註或操作說明</dd>
+          <dt>觸控操作</dt><dd>左右滑動換頁</dd>
+        </dl>
+        <p>講者備註會顯示在目前畫面上。</p>
+      </form>
+    </dialog>
+    <noscript>啟用 JavaScript 後可使用換頁功能；目前以連續頁面閱讀。</noscript>
+    <script src="../../app.js"></script>
+    <script src="assets/chart.umd.min.js"></script>
+    <script src="assets/charts.js"></script>
+  </body>
+</html>

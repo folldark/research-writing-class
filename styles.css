@@ -262,3 +262,29 @@ noscript { display: block; padding: 1rem; background: var(--paper); }
   .map-table { font-size: 15pt; }
   .premises.purpose { font-size: 18pt; }
 }
+/* 2026-10-21「資料視覺化」單元新增：數字對照、圖表容器（Chart.js 放在單元 assets/）。 */
+.stat-pair { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 4vw, 4rem); padding: 0; list-style: none; max-width: 70rem; }
+.stat-pair li { display: grid; gap: .3em; padding-top: .8em; border-top: 3px solid var(--accent); }
+.stat-pair .label { font-size: clamp(.9rem, 1.45vw, 1.25rem); font-weight: 800; letter-spacing: .16em; color: var(--accent); }
+.stat-pair .stat { font-size: clamp(3rem, 7vw, 7rem); font-weight: 900; letter-spacing: -.04em; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.stat-pair .stat-sub { font-size: clamp(1rem, 1.6vw, 1.5rem); color: var(--muted); }
+.chart-box { position: relative; margin: 0; height: clamp(16rem, 52vh, 36rem); min-width: 0; padding: .6rem; border: 1px solid rgb(28 48 70 / .15); border-radius: .6rem; background: white; }
+.chart-wide { height: clamp(18rem, 58vh, 44rem); }
+.chart-split { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(1.5rem, 3vw, 3rem); align-items: center; }
+.chart-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.chart-side { display: grid; gap: 1.2rem; }
+.chart-side .quote-block { font-size: clamp(1.15rem, 2vw, 2rem); }
+.chart-slide { gap: .8rem; }
+@media (max-width: 760px) {
+  .stat-pair, .chart-split { grid-template-columns: 1fr; }
+  .chart-box { height: 15rem; }
+  .chart-wide { height: 22rem; }
+}
+@media (max-height: 560px) and (min-width: 761px) {
+  .chart-box { height: 55vh; }
+  .stat-pair .stat { font-size: 12vh; }
+}
+@media print {
+  .chart-box { height: 110mm; }
+  .stat-pair .stat { font-size: 54pt; }
+}

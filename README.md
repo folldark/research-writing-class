@@ -7,6 +7,7 @@
 - 2026-09-09「問題意識」再探，38 張
 - 2026-09-15「研究動機」（502），32 張；無圖片，`styles.css` 末尾新增 `.quote-block`、`.contrast`、`.premises .sub`、`.prose`、`.sample-tag` 五組版面
 - 2026-10-13「研究方法」，52 張；無圖片，範例取自中學生網站 1150313 梯次小論文特優作品；`styles.css` 末尾新增 `.map-table`（三欄對照表）、`.premises.purpose`（研究目的清單）、`.premises.checklist`（七項檢查表）、`.premises.two-col`（直向排序的雙欄清單）四組版面
+- 2026-10-21「資料視覺化」，22 張；沿用 114-2（505）2026-05-07 的 reveal.js 版投影片改寫成本課版型，正文不變。圖表用 Chart.js 4.4.1，檔案放在單元 `assets/chart.umd.min.js`（MIT 授權，自 jsDelivr 下載後納入 repo，不連外部 CDN），圖表資料與設定在 `assets/charts.js`；`styles.css` 末尾新增 `.stat-pair`（大數字對照）、`.chart-box`／`.chart-wide`／`.chart-split`／`.chart-pair`（圖表容器）。第 4 張原版把出手數與命中率畫在同一軸，改拆成兩張小圖
 
 ## 目錄結構
 
@@ -29,9 +30,15 @@ research-writing-class/
     ├── 2026-09-15-研究動機/
     │   ├── index.html
     │   └── 講義原稿.md
-    └── 2026-10-13-研究方法/
+    ├── 2026-10-13-研究方法/
+    │   ├── index.html
+    │   └── 講義原稿.md
+    └── 2026-10-21-資料視覺化/
         ├── index.html
-        └── 講義原稿.md
+        ├── 講義原稿.md
+        └── assets/
+            ├── chart.umd.min.js  # Chart.js 4.4.1（MIT）
+            └── charts.js         # 本單元圖表資料與設定
 ```
 
 ## 本地預覽
@@ -44,7 +51,7 @@ python3 -m http.server 8000
 
 以瀏覽器開啟 <http://localhost:8000>，從課程首頁進入單元。結束預覽時，在 Terminal 按 `Ctrl+C`。
 
-全站是純靜態 HTML／CSS／JavaScript，不需要套件安裝或建置步驟，不依賴外部 CDN。字型使用 macOS 內建的 PingFang TC、Heiti TC，以及其他常見系統字型 Microsoft JhengHei、system-ui。站內檔案採相對路徑，可直接用於 GitHub Pages 的 repository 子路徑；只有原稿的外部參考文章使用完整 HTTPS 網址。首次載入後，換頁不需要網路；外部閱讀連結仍需連線。
+全站是純靜態 HTML／CSS／JavaScript，不需要套件安裝或建置步驟，不依賴外部 CDN（需要圖表的單元把函式庫放在自己的 `assets/`）。字型使用 macOS 內建的 PingFang TC、Heiti TC，以及其他常見系統字型 Microsoft JhengHei、system-ui。站內檔案採相對路徑，可直接用於 GitHub Pages 的 repository 子路徑；只有原稿的外部參考文章使用完整 HTTPS 網址。首次載入後，換頁不需要網路；外部閱讀連結仍需連線。
 
 ## 操作方式
 
