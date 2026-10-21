@@ -7,7 +7,7 @@
 - 2026-09-09「問題意識」再探，38 張
 - 2026-09-15「研究動機」（502），32 張；無圖片，`styles.css` 末尾新增 `.quote-block`、`.contrast`、`.premises .sub`、`.prose`、`.sample-tag` 五組版面
 - 2026-10-13「研究方法」，52 張；無圖片，範例取自中學生網站 1150313 梯次小論文特優作品；`styles.css` 末尾新增 `.map-table`（三欄對照表）、`.premises.purpose`（研究目的清單）、`.premises.checklist`（七項檢查表）、`.premises.two-col`（直向排序的雙欄清單）四組版面
-- 2026-10-21「資料視覺化」，22 張；沿用 114-2（505）2026-05-07 的 reveal.js 版投影片改寫成本課版型，正文不變。圖表用 Chart.js 4.4.1，檔案放在單元 `assets/chart.umd.min.js`（MIT 授權，自 jsDelivr 下載後納入 repo，不連外部 CDN），圖表資料與設定在 `assets/charts.js`；`styles.css` 末尾新增 `.stat-pair`（大數字對照）、`.chart-box`／`.chart-wide`／`.chart-split`／`.chart-pair`（圖表容器）。第 4 張原版把出手數與命中率畫在同一軸，改拆成兩張小圖
+- 2026-10-21「資料視覺化」，23 張；沿用 114-2（505）2026-05-07 的 reveal.js 版投影片改寫成本課版型，正文不變。圖表用 Chart.js 4.4.1，檔案放在單元 `assets/chart.umd.min.js`（MIT 授權，自 jsDelivr 下載後納入 repo，不連外部 CDN），圖表資料與設定在 `assets/charts.js`；`styles.css` 末尾新增 `.stat-pair`（大數字對照）、`.chart-box`／`.chart-wide`／`.chart-split`／`.chart-pair`（圖表容器）。第 4 張原版把出手數與命中率畫在同一軸，改拆成兩張小圖。第 7 張是 NBAU 粉專的球員頭像版散布圖（`assets/nbau-3pt-headshots.jpg`，Stats via NBA.com 2025-03-14，版權屬原作者、僅課堂引用），配 `styles.css` 末尾新增的 `.figure-slide`／`.poster-figure`（直式海報圖片頁）
 
 ## 目錄結構
 

@@ -288,3 +288,15 @@ noscript { display: block; padding: 1rem; background: var(--paper); }
   .chart-box { height: 110mm; }
   .stat-pair .stat { font-size: 54pt; }
 }
+/* 2026-10-21「資料視覺化」單元新增：直式海報圖片頁（圖在左、說明在右）。 */
+.figure-slide { grid-template-columns: auto 1fr; align-items: center; column-gap: clamp(1.5rem, 4vw, 4rem); padding-block: clamp(2.5rem, 5vh, 4rem) clamp(5rem, 9vh, 6rem); }
+.poster-figure { margin: 0; }
+.poster-figure img { display: block; height: min(76svh, 52rem); width: auto; max-width: 100%; border-radius: .6rem; box-shadow: var(--shadow); }
+.figure-copy { display: grid; gap: 1rem; align-content: center; }
+@media (max-width: 760px) {
+  .figure-slide { grid-template-columns: 1fr; }
+  .poster-figure img { height: auto; width: 100%; }
+}
+@media print {
+  .poster-figure img { height: 160mm; }
+}
