@@ -300,3 +300,25 @@ noscript { display: block; padding: 1rem; background: var(--paper); }
 @media print {
   .poster-figure img { height: 160mm; }
 }
+/* 2026-11-17「研究流程與研究架構」單元新增：論文截圖（白底卡片，寬圖撐滿、高圖限高）、截圖並排、左文右圖。 */
+.shot-slide { gap: clamp(.7rem, 1.8vh, 1.4rem); padding-block: clamp(3.5rem, 7vh, 5rem) clamp(5rem, 10vh, 6.5rem); }
+.shot-slide .body-large { max-width: 60rem; font-size: clamp(1.15rem, 2vw, 2rem); }
+.shot { margin: 0; min-width: 0; }
+.shot img { display: block; width: auto; height: auto; max-width: 100%; max-height: 62svh; padding: .5rem; border: 1px solid rgb(28 48 70 / .15); border-radius: .5rem; background: white; box-shadow: var(--shadow); }
+.shot.shot-short img { max-height: 50svh; }
+.shot.shot-tall img { max-height: 72svh; }
+.shot figcaption { margin-top: .6rem; font-size: clamp(.85rem, 1.15vw, 1.1rem); line-height: 1.5; color: var(--muted); }
+.shot-pair { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1rem, 2.5vw, 2.5rem); align-items: start; }
+.shot-pair .shot img { max-height: 58svh; }
+.shot-split { display: grid; grid-template-columns: minmax(0, .9fr) auto; gap: clamp(1.5rem, 3vw, 3rem); align-items: center; }
+.shot-copy { display: grid; gap: 1.2rem; }
+.shot-copy .body-large { font-size: clamp(1.15rem, 2vw, 2rem); }
+@media (max-width: 760px) {
+  .shot-pair, .shot-split { grid-template-columns: 1fr; }
+  .shot img, .shot.shot-short img, .shot.shot-tall img, .shot-pair .shot img { max-height: none; width: 100%; }
+}
+@media print {
+  .shot img { max-height: 120mm; box-shadow: none; }
+  .shot.shot-short img { max-height: 100mm; }
+  .shot.shot-tall img, .shot-pair .shot img { max-height: 140mm; }
+}

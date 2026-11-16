@@ -8,6 +8,7 @@
 - 2026-09-15「研究動機」（502），32 張；無圖片，`styles.css` 末尾新增 `.quote-block`、`.contrast`、`.premises .sub`、`.prose`、`.sample-tag` 五組版面
 - 2026-10-13「研究方法」，52 張；無圖片，範例取自中學生網站 1150313 梯次小論文特優作品；`styles.css` 末尾新增 `.map-table`（三欄對照表）、`.premises.purpose`（研究目的清單）、`.premises.checklist`（七項檢查表）、`.premises.two-col`（直向排序的雙欄清單）四組版面
 - 2026-10-21「資料視覺化」，23 張；沿用 114-2（505）2026-05-07 的 reveal.js 版投影片改寫成本課版型，正文不變。圖表用 Chart.js 4.4.1，檔案放在單元 `assets/chart.umd.min.js`（MIT 授權，自 jsDelivr 下載後納入 repo，不連外部 CDN），圖表資料與設定在 `assets/charts.js`；`styles.css` 末尾新增 `.stat-pair`（大數字對照）、`.chart-box`／`.chart-wide`／`.chart-split`／`.chart-pair`（圖表容器）。第 4 張原版把出手數與命中率畫在同一軸，改拆成兩張小圖。第 7 張是 NBAU 粉專的球員頭像版散布圖（`assets/nbau-3pt-headshots.jpg`，Stats via NBA.com 2025-03-14，版權屬原作者、僅課堂引用），配 `styles.css` 末尾新增的 `.figure-slide`／`.poster-figure`（直式海報圖片頁）
+- 2026-11-17「研究流程與研究架構」，33 張；範例是 5 篇真實作品的「參、研究方法」截圖（見下方〈2026-11-17 範例截圖〉），全文 PDF 放在 502 課程 Drive，僅分享給 Classroom 學生群組。第 15–17、22、31 張是依原稿要求補充的內容，投影片上以「補充」標籤標示。`styles.css` 末尾新增 `.shot-slide`／`.shot`（白底截圖卡片，`.shot-short`、`.shot-tall` 調整限高）、`.shot-pair`（兩張截圖並排）、`.shot-split`（左文右圖）
 
 ## 目錄結構
 
@@ -114,6 +115,19 @@ Use case: stylized-concept. Asset type: abstract illustration for an academic re
 ```text
 Use case: stylized-concept. Asset type: abstract illustration for an academic research-methods HTML slide. Primary request: innumerable tiny grains and short geometric strokes accumulate layer upon layer into one coherent rising structure, evoking research built on prior work, accumulation of knowledge. Style: restrained editorial abstraction, delicate geometry, tactile paper grain, subtle gradients. Color palette: cool paper white #f6f7f8 background, ink navy #182e46, slate blue, mist blue #a8c9df. Composition: landscape 3:2; abstract layered structure on right two-thirds, left third calm negative space. No literal tower or building, no scenery, no people, no objects. Text: none. No letters, logos or watermark. Output PNG.
 ```
+
+## 2026-11-17 範例截圖
+
+`lessons/2026-11-17-研究流程與研究架構/assets/` 的截圖都是作品 PDF 以 `pdftoppm -r 200` 轉圖後裁切，只取「參、研究方法」相關段落，供課堂引用；著作權屬原作者與原校。
+
+| 檔案 | 來源 |
+| --- | --- |
+| `xiaoming-method.png`、`xiaoming-flow.png`、`xiaoming-framework.png` | 曉明女中提供〈「聰明藥」之藥理學探究〉寫作範例與註解（掃描檔，第 2–3 頁，含該校註解） |
+| `smile-flow.png` | 1150313 梯次特優，振聲高中〈笑容背後的選擇－高中生眼中的隱適美與傳統牙套〉第 3 頁 |
+| `sushi-flow.png` | 1150313 梯次特優，士林高商〈壽司雙雄傳－壽司郎及藏壽司之經營策略與顧客滿意度分析〉第 6 頁 |
+| `crypto-flow.png`、`crypto-framework.png` | 1150313 梯次特優，永平高中〈古典密碼到現代加密——資訊安全的演進與實作〉第 5–6 頁 |
+| `pleasure-framework.png` | 1150313 梯次特優，大同高中〈從蔡依林專輯《Pleasure》探討女性慾望之反動〉第 3 頁 |
+| `rubric-method.png` | 中學生網站小論文評審要點「研究方法」段（授課老師的截圖，藍色標示為老師所加） |
 
 ## 授權
 
